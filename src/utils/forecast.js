@@ -9,11 +9,12 @@ const forecast = (lat, long, callback) => {
         }else if(body.error){
             callback("No se encuentra la ubicacion",undefined)
         }else{
-            const {temperature, feelslike, weather_descriptions}= body.current
+            const {temperature, feelslike, weather_descriptions, humidity}= body.current
             callback(undefined, {
                 temperatura : temperature,
                 sensacion : feelslike,
-                descripcion: weather_descriptions[0]
+                descripcion: weather_descriptions[0],
+                humedad: humidity
             })
         }
     })

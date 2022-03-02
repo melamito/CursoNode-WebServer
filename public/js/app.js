@@ -18,9 +18,11 @@ weatherForm.addEventListener('submit', (e) => {
         }else{
             messageOne.textContent = data.location
             console.log(data.location)
-            messageTwo.textContent = 'Temperatura: '+data.forecastData.temperatura 
-                + '\nSensacion: ' + data.forecastData.sensacion
-                + '\n Descripcion: ' + data.forecastData.descripcion 
+            messageTwo.textContent = 
+                'La temperatura actual es '+ data.forecastData.temperatura +
+                ' grados, que se sienten como ' + data.forecastData.sensacion +
+                ' grados, el dia estará ' + data.forecastData.descripcion +
+                ' y la humedad en el ambiente es %' + data.forecastData.humedad
             console.log(data.forecastData)
         }
     })
