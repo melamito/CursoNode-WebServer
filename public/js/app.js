@@ -1,11 +1,7 @@
-console.log("wenas wenaaaaaas")
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message1')
 const messageTwo = document.querySelector('#message2')
-
-// messageOne.textContent = 'From JS'
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
